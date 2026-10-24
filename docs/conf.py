@@ -11,3 +11,5 @@ extensions = [
 source_suffix = [".rst", ".md"]
 
 html_theme = "furo"
+
+exclude_patterns = ["_build"]
