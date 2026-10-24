@@ -38,3 +38,13 @@ def test_ndigits_deprecated():
     """Tests if ndigits throws a warning."""
     with pytest.warns(DeprecationWarning):
         assert LabUnc(10, 0.1).ndigits == 1
+
+def test_add_commutative(ab):
+    """Test commutativity of addition."""
+    a, b = ab
+    assert LabUnc(*a) + LabUnc(*b) == LabUnc(*b) + LabUnc(*a)
+
+def test_mul_commutative(ab):
+    """Test commutativity of multiplication."""
+    a, b = ab
+    assert LabUnc(*a) * LabUnc(*b) == LabUnc(*b) * LabUnc(*a)
