@@ -4,6 +4,7 @@ from uncertainties import ufloat
 
 from unc import StdUnc
 
+
 def test_add(ab):
     """Test addition of two StdUnc instances."""
     a, b = ab
