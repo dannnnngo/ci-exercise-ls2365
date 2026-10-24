@@ -1,0 +1,18 @@
+[project]
+name = "unc"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Yuyuan(Lisa) Shao", email = "ls2365@princeton.edu" }
+]
+requires-python = ">=3.11"
+dependencies = ["typing_extensions; python_version<'3.13'"]
+
+[build-system]
+requires = ["uv_build>=0.11.22,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+test = ["pytest", "uncertainties"]
+docs = ["sphinx", "furo", "myst_parser", "sphinx-markdown-builder"]
